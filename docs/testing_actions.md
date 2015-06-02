@@ -80,7 +80,10 @@ describe('PetActions', () => {
       petActions.buyExoticPet({pet, cost});
       // use our spy to see what payload the dispatcher was called with
       // this lets us ensure that the expected payload (with US dollars) was fired
-      assert(this.dispatcherSpy.calledWith({action, data: {pet, cost: totalCost}}), 'dispatcher did not receive correct payload');
+      var dispatcherArgs = this.dispatcherSpy.args[0];
+      var firstArg = dispatcherArgs[0];
+      assert.equal(firstArg.action, action);
+      assert.deepEqual(firstArg.data, {pet, cost: totalCost});
     });
 
     it('does not fire illegal action for legal pets', () => {
