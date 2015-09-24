@@ -9,22 +9,22 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^5.2.17",
-    "babel-loader": "^5.0.0",
-    "chai": "^2.1.1",
-    "karma": "^0.12.31",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "chai": "^3.3.0",
+    "karma": "^0.13.10",
     "karma-chai": "^0.1.0",
-    "karma-mocha": "^0.1.10",
-    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-mocha": "^0.2.0",
+    "karma-phantomjs-launcher": "^0.2.1",
     "karma-sinon": "^1.0.4",
-    "karma-sourcemap-loader": "^0.3.4",
-    "karma-webpack": "^1.5.1",
-    "mocha": "^2.2.4",
+    "karma-sourcemap-loader": "^0.3.5",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.3",
     "sinon": "git://github.com/cjohansen/Sinon.JS#b672042043517b9f84e14ed0fb8265126168778a",
-    "webpack": "^1.8.11"
+    "webpack": "^1.12.2"
   },
   "dependencies": {
-    "alt": "^0.16.4",
-    "react": "^0.13.2"
+    "alt": "^0.17.3",
+    "react": "^0.13.3"
   }
 }
