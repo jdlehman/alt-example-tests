@@ -20,6 +20,7 @@
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.3.3",
+    "phantomjs-prebuilt": "^2.1.9",
     "sinon": "git://github.com/cjohansen/Sinon.JS#f13c1b50766112fdca3baeff2e10cbaadfadc3df",
     "webpack": "^1.12.4"
   },
