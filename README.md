@@ -8,4 +8,4 @@ This repo is to show example store and action tests using the Flux library, [alt
 ## Usage
 
 - Run `npm install` to install deps.
-- Run `npm run test` to run tests.
+- Run `npm test` to run tests.
