@@ -1,8 +1,6 @@
 import alt from 'MyAlt';
 import petActions from 'actions/PetActions';
 import legalActions from 'actions/LegalActions';
-// you can use any assertion lib you want
-import {assert} from 'chai';
 // we will use [sinon](http://sinonjs.org/docs/) for spying, but you can use any similar lib
 import sinon from 'sinon';
 
@@ -32,8 +30,8 @@ describe('PetActions', function() {
       // this lets us ensure that the expected payload (with US dollars) was fired
       var dispatcherArgs = this.dispatcherSpy.args[0];
       var firstArg = dispatcherArgs[0];
-      assert.equal(firstArg.action, action);
-      assert.deepEqual(firstArg.data, {pet, cost: totalCost});
+      expect(firstArg.action).toBe(action);
+      expect(firstArg.data).toEqual({pet, cost: totalCost});
     });
 
     it('does not fire illegal action for legal pets', function() {
@@ -43,7 +41,7 @@ describe('PetActions', function() {
       // fire the action
       petActions.buyExoticPet({pet, cost});
       // use our spy to ensure that the illegal action was NOT called
-      assert.equal(this.illegalSpy.callCount, 0);
+      expect(this.illegalSpy.callCount).toBe(0);
     });
 
     it('fires illegal action for illegal pets', function() {
@@ -53,7 +51,7 @@ describe('PetActions', function() {
       // fire the action
       petActions.buyExoticPet({pet, cost});
       // use our spy to ensure that the illegal action was called
-      assert(this.illegalSpy.calledOnce, 'the illegal action was not fired');
+      expect(this.illegalSpy.calledOnce).toBe(true);
     });
   });
 });
