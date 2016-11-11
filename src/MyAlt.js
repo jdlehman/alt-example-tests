@@ -1,2 +1,3 @@
 import Alt from 'alt';
-export default new Alt();
+const altInstance = new Alt();
+export default altInstance;
